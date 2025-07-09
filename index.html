@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Jarys Shop - Магазин аккаунтов Brawl Stars</title>
-<style>
-  body { font-family: Arial, sans-serif; background:#f7f7f7; margin:0; padding:20px;}
-  header { background:#4CAF50; color:#fff; padding:10px; text-align:center; }
-  h1 { margin:0; }
-  .lang-switch { margin: 10px 0; text-align:center; }
-  .products, .boosts { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
-  .product, .boost { background:#fff; border:1px solid #ddd; border-radius:5px; width: 280px; padding:15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
-  .product img, .boost img { max-width: 100%; border-radius: 5px; }
-  .product h2, .boost h2 { margin:10px 0 5px; font-size:18px; }
-  .product p, .boost p { margin:5px 0; }
-  .buy-btn { display:block; margin-top:10px; padding:10px; background:#4CAF50; color:#fff; text-align:center; text-decoration:none; border-radius:4px; }
-  section { margin-top: 30px; }
-  section h2 { text-align: center; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jarys Shop - Магазин аккаунтов Brawl Stars</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f7f7f7; margin:0; padding:20px;}
+    header { background:#4CAF50; color:#fff; padding:10px; text-align:center; }
+    h1 { margin:0; }
+    .lang-switch { margin: 10px 0; text-align:center; }
+    .products, .boosts { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .product, .boost { background:#fff; border:1px solid #ddd; border-radius:5px; width: 280px; padding:15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    .product img, .boost img { max-width: 100%; border-radius: 5px; }
+    .product h2, .boost h2 { margin:10px 0 5px; font-size:18px; }
+    .product p, .boost p { margin:5px 0; }
+    .buy-btn { display:block; margin-top:10px; padding:10px; background:#4CAF50; color:#fff; text-align:center; text-decoration:none; border-radius:4px; }
+    section { margin-top: 30px; }
+    section h2 { text-align: center; }
+  </style>
 </head>
 <body>
 
@@ -32,38 +32,34 @@
 
 <section>
   <h2 id="products-title">Доступные аккаунты</h2>
-  <div class="products" id="products">
-    <!-- Аккаунты будут тут -->
-  </div>
+  <div class="products" id="products"></div>
 </section>
 
 <section>
   <h2 id="boosts-title">Прокачка аккаунтов</h2>
-  <div class="boosts" id="boosts">
-    <!-- Прокачка будет тут -->
-  </div>
+  <div class="boosts" id="boosts"></div>
 </section>
 
 <script>
 const productsData = {
   ru: [
-    {id:1, title:"Аккаунт 80+ бойцов", price:"115000 ₸", img:"https://i.imgur.com/yourimage1.jpg", link:"https://t.me/JarusShopkz"},
-    {id:2, title:"Аккаунт новичка", price:"12000 ₸", img:"https://i.imgur.com/yourimage2.jpg", link:"https://t.me/JarusShopkz"},
+    { title: "Аккаунт 80+ бойцов", price: "115000 ₸", img: "https://i.imgur.com/yourimage1.jpg", link: "https://t.me/JarusShopkz" },
+    { title: "Аккаунт новичка", price: "12000 ₸", img: "https://i.imgur.com/yourimage2.jpg", link: "https://t.me/JarusShopkz" }
   ],
   kz: [
-    {id:1, title:"80+ боец аккаунт", price:"115000 ₸", img:"https://i.imgur.com/yourimage1.jpg", link:"https://t.me/JarusShopkz"},
-    {id:2, title:"Жаңа аккаунт", price:"12000 ₸", img:"https://i.imgur.com/yourimage2.jpg", link:"https://t.me/JarusShopkz"},
+    { title: "80+ боец аккаунт", price: "115000 ₸", img: "https://i.imgur.com/yourimage1.jpg", link: "https://t.me/JarusShopkz" },
+    { title: "Жаңа аккаунт", price: "12000 ₸", img: "https://i.imgur.com/yourimage2.jpg", link: "https://t.me/JarusShopkz" }
   ]
 };
 
 const boostsData = {
   ru: [
-    {id:1, title:"Прокачка до 50 уровня", price:"25000 ₸", img:"https://i.imgur.com/boost1.jpg", link:"https://t.me/JarusShopkz"},
-    {id:2, title:"Прокачка до 100 уровня", price:"45000 ₸", img:"https://i.imgur.com/boost2.jpg", link:"https://t.me/JarusShopkz"},
+    { title: "Прокачка до 50 уровня", price: "25000 ₸", img: "https://i.imgur.com/boost1.jpg", link: "https://t.me/JarusShopkz" },
+    { title: "Прокачка до 100 уровня", price: "45000 ₸", img: "https://i.imgur.com/boost2.jpg", link: "https://t.me/JarusShopkz" }
   ],
   kz: [
-    {id:1, title:"50 деңгейге дейін жетілдіру", price:"25000 ₸", img:"https://i.imgur.com/boost1.jpg", link:"https://t.me/JarusShopkz"},
-    {id:2, title:"100 деңгейге дейін жетілдіру", price:"45000 ₸", img:"https://i.imgur.com/boost2.jpg", link:"https://t.me/JarusShopkz"},
+    { title: "50 деңгейге дейін жетілдіру", price: "25000 ₸", img: "https://i.imgur.com/boost1.jpg", link: "https://t.me/JarusShopkz" },
+    { title: "100 деңгейге дейін жетілдіру", price: "45000 ₸", img: "https://i.imgur.com/boost2.jpg", link: "https://t.me/JarusShopkz" }
   ]
 };
 
@@ -72,31 +68,39 @@ let currentLang = 'ru';
 function renderProducts(lang) {
   const container = document.getElementById('products');
   container.innerHTML = '';
-  productsData[lang].forEach(p => {
+  productsData[lang].forEach(item => {
     container.innerHTML += `
       <div class="product">
-        <img src="${p.img}" alt="${p.title}" />
-        <h2>${p.title}</h2>
-        <p>Цена: <strong>${p.price}</strong></p>
-        <a href="${p.link}" class="buy-btn" target="_blank">Купить</a>
+        <img src="${item.img}" alt="${item.title}" />
+        <h2>${item.title}</h2>
+        <p>Цена: <strong>${item.price}</strong></p>
+        <a href="${item.link}" class="buy-btn" target="_blank">Купить</a>
       </div>
     `;
   });
-  document.getElementById('title').textContent = lang === 'ru' ? 'Jarys Shop - Магазин аккаунтов Brawl Stars' : 'Jarys Shop - Brawl Stars аккаунттарының дүкені';
-  document.getElementById('products-title').textContent = lang === 'ru' ? 'Доступные аккаунты' : 'Қолжетімді аккаунттар';
-  document.getElementById('boosts-title').textContent = lang === 'ru' ? 'Прокачка аккаунтов' : 'Аккаунттарды жетілдіру';
+
+  document.getElementById('title').textContent =
+    lang === 'ru'
+      ? 'Jarys Shop - Магазин аккаунтов Brawl Stars'
+      : 'Jarys Shop - Brawl Stars аккаунттарының дүкені';
+
+  document.getElementById('products-title').textContent =
+    lang === 'ru' ? 'Доступные аккаунты' : 'Қолжетімді аккаунттар';
+
+  document.getElementById('boosts-title').textContent =
+    lang === 'ru' ? 'Прокачка аккаунтов' : 'Аккаунттарды жетілдіру';
 }
 
 function renderBoosts(lang) {
   const container = document.getElementById('boosts');
   container.innerHTML = '';
-  boostsData[lang].forEach(b => {
+  boostsData[lang].forEach(item => {
     container.innerHTML += `
       <div class="boost">
-        <img src="${b.img}" alt="${b.title}" />
-        <h2>${b.title}</h2>
-        <p>Цена: <strong>${b.price}</strong></p>
-        <a href="${b.link}" class="buy-btn" target="_blank">Купить</a>
+        <img src="${item.img}" alt="${item.title}" />
+        <h2>${item.title}</h2>
+        <p>Цена: <strong>${item.price}</strong></p>
+        <a href="${item.link}" class="buy-btn" target="_blank">Заказать</a>
       </div>
     `;
   });
